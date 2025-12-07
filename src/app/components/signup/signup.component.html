@@ -1,0 +1,153 @@
+<div class="home" >
+		<div class="home_background_container prlx_parent" style="height: 350%; ">
+			<div class="home_background prlx" style="background-image:url(images/login.jpg)"></div>
+		</div>
+		<div class="home_content">
+			<h1>Sign Up</h1>
+		</div>
+</div>
+
+	<!-- Contact -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					
+					<!-- Contact Form -->
+					<div class="contact_form">
+						<div class="contact_title">Get in touch</div>
+
+						<div class="contact_form_container">
+							<form action="post"[formGroup]="sigunp" >
+                                <div  style="margin-top: 20px;">
+									<input id="cin" name="cin" class="input_field contact_form_email" type="text" placeholder="CIN" formControlName="cin"  >
+								</div>
+                                 <div *ngIf="sigunp.controls['cin'].invalid && sigunp.controls['cin'].touched || sigunp.controls['cin'].dirty" >
+                                    <div *ngIf="sigunp.controls['cin'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>CIN is required</span> 
+                                    </div>
+                                    <div *ngIf="sigunp.controls['cin'].errors?.['minlength'] || sigunp.controls['cin'].errors?.['maxlength'] || sigunp.controls['cin'].errors?.['pattern'] " class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> CIN is invalid</span>
+                                    </div>
+                                </div>
+                                <div  style="margin-top: 20px;">
+									<input id="firstName" name="firstName" class="input_field contact_form_email" type="test" placeholder="FirstName" formControlName="FirstName"  >
+								</div>
+                                <div *ngIf="sigunp.controls['FirstName'].invalid && sigunp.controls['FirstName'].touched || sigunp.controls['FirstName'].dirty" >
+                                    <div *ngIf="sigunp.controls['FirstName'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>First Name is required</span> 
+                                    </div>
+                                    <div *ngIf="sigunp.controls['FirstName'].errors?.['minlength'] || sigunp.controls['FirstName'].errors?.['pattern']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> First Name is invalid</span>
+                                    </div>
+                                </div>
+                                <div  style="margin-top: 20px;">
+									<input id="lastName" name="lastName" class="input_field contact_form_email" type="text" placeholder="LastName" formControlName="LastName"  >
+								</div>
+                                 <div *ngIf="sigunp.controls['LastName'].invalid && sigunp.controls['LastName'].touched || sigunp.controls['LastName'].dirty" >
+                                    <div *ngIf="sigunp.controls['LastName'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Last Name is required</span> 
+                                    </div>
+                                    <div *ngIf="sigunp.controls['LastName'].errors?.['minlength'] || sigunp.controls['LastName'].errors?.['pattern']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> Last Name is invalid</span>
+                                    </div>
+                                </div>
+                                <div  style="margin-top: 20px;">
+									<input id="tel" name="tel" class="input_field contact_form_email" type="text" placeholder="Number Phone" formControlName="tel"  >
+								</div>
+                                <div *ngIf="sigunp.controls['tel'].invalid && sigunp.controls['tel'].touched || sigunp.controls['tel'].dirty" >
+                                    <div *ngIf="sigunp.controls['tel'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Number Phone is required</span> 
+                                    </div>
+                                    <div *ngIf="sigunp.controls['tel'].errors?.['minlength'] || sigunp.controls['tel'].errors?.['maxlength'] || sigunp.controls['tel'].errors?.['pattern'] " class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> Number Phone is invalid</span>
+                                    </div>
+                                </div>
+								<div  style="margin-top: 20px;">
+									<input id="email" name="email" class="input_field contact_form_email" type="email" placeholder="E-mail" formControlName="Email"  >
+								</div>
+                                <div *ngIf="sigunp.controls['Email'].invalid && sigunp.controls['Email'].touched || sigunp.controls['Email'].dirty" >
+                                    
+                                    <div *ngIf="sigunp.controls['Email'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Email is required</span> 
+                                    </div>
+                                    <div *ngIf=" sigunp.controls['Email'].errors?.['email']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> Email is invalid</span>
+                                    </div>
+                                </div>
+						
+								<div style="margin-top: 20px;">
+									<input id="pwd" class="input_field contact_form_name" type="password" placeholder="password" formControlName="Pwd"   >
+								</div>
+                                <div *ngIf="sigunp.controls['Pwd'].invalid && sigunp.controls['Pwd'].touched || sigunp.controls['Pwd'].dirty" >
+                                    
+                                    <div *ngIf="sigunp.controls['Pwd'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Password is required</span> 
+                                    </div>
+                                    <div *ngIf=" sigunp.controls['Pwd'].errors?.['pattern'] || sigunp.controls['Pwd'].errors?.['minlength'] || sigunp.controls['Pwd'].errors?.['maxlength'] " class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> Password is invalid(8 chars: 1 uppercase, 1 lowercase, 1 digit, 1 symbol)</span>
+                                    </div>
+                                </div>
+								
+								<div>
+								<input type="radio" name="role" value="admin" class="ra" formControlName="role" ><label for="admin" class="la" >Admin</label>
+								<input type="radio" name="role" value="user" class="ra" formControlName="role" ><label for="user" class="la" >User</label>
+								<input type="radio" name="role" value="membres" class="ra" formControlName="role" ><label for="membres" class="la" >Membres du Campus</label>
+								</div>
+                                <p *ngIf="msg" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>{{ msg }}</span>
+                                </p>
+                                                                    
+								
+								
+								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit"(click)="addEtudient()">Sign Up</button>
+							</form>
+						</div>
+					</div>
+						
+				</div>
+
+				
+
+
+			</div>

@@ -1,0 +1,103 @@
+<div class="home">
+		<div class="home_background_container prlx_parent">
+			<div class="home_background prlx" style="background-image:url(images/signup.jpg)"></div>
+		</div>
+		<div class="home_content">
+			<h1>Login</h1>
+		</div>
+</div>
+
+	<!-- Contact -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					
+					<!-- Contact Form -->
+					<div class="contact_form">
+						<div class="contact_title">Get in touch</div>
+
+						<div class="contact_form_container">
+							<form action="post" #loginform="ngForm" (ngSubmit)="addUser()">
+								<div  style="margin-top: 20px;">
+									<input id="email" name="email" class="input_field contact_form_email" type="email" placeholder="E-mail" [(ngModel)]="user.email" #emailCtrl="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" >
+								</div>
+								 <div *ngIf="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)" class="text-danger small mt-1">
+                    <div *ngIf="emailCtrl.errors?.['required']" class="msg-erreur">
+                     <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+                      <span>Email required</span> 
+                    </div>
+                    <div *ngIf="emailCtrl.errors?.['pattern']" class="msg-erreur">
+                      <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+                    <span> Format invalide (ex: userdomaine.com)</span>
+                    </div>
+                  </div>
+								<div style="margin-top: 20px;">
+									<input id="pwd" class="input_field contact_form_name" type="password" placeholder="password" [(ngModel)]="user.pwd" #pwdCtrl="ngModel" name="pwd" required  >
+								</div>
+								<div *ngIf="pwdCtrl.invalid && pwdCtrl.touched" class="text-danger small mt-1" >
+                    <div *ngIf="pwdCtrl.errors?.['required']" class="msg-erreur">
+                     <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+                      <span>Password is required</span> 
+                    </div>
+								</div>
+								<div>
+								<input type="radio" name="role" value="admin" class="ra"  [(ngModel)]="user.selectedRole" required=""><label for="admin" class="la" >Admin</label>
+								<input type="radio" name="role" value="user" class="ra"  [(ngModel)]="user.selectedRole" required=""><label for="user" class="la" >User</label>
+								<input type="radio" name="role" value="membres" class="ra"  [(ngModel)]="user.selectedRole" required=""><label for="membres" class="la" >Membres du Campus</label>
+								</div>
+								 <p *ngIf="msg" class="msg-erreur">
+      <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                      </svg>
+    <span>{{ msg }}</span>
+  </p>
+								
+								
+								
+								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit">Login</button>
+								<a routerLink="/signup" class="l">Sign Up</a>
+							</form>
+						</div>
+					</div>
+						
+				</div>
+
+				<div class="col-lg-4">
+					<div class="about">
+						<div class="about_title">Join Courses</div>
+						<p class="about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus.</p>
+
+						<div class="contact_info">
+							<ul>
+								<li class="contact_info_item">
+									<div class="contact_info_icon">
+										<img src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g">
+									</div>
+									Blvd Libertad, 34 m05200 Arévalo
+								</li>
+								<li class="contact_info_item">
+									<div class="contact_info_icon">
+										<img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
+									</div>
+									0034 37483 2445 322
+								</li>
+								<li class="contact_info_item">
+									<div class="contact_info_icon">
+										<img src="images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g">
+									</div>hellocompany.com
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
