@@ -72,6 +72,49 @@
 #tit{
     font-size: 100px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
+    color: rgb(40, 253, 3);
     font-weight: bold;
+}
+/* Style pour le label du champ de fichier (le texte "Choisir un fichier" + le bouton caché) */
+.custom-file-upload {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 24px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+.custom-file-upload:hover {
+    border-color: #00c853;
+    background: #f8fff8;
+    box-shadow: 0 6px 20px rgba(0, 200, 83, 0.2);
+    transform: translateY(-2px);
+}
+
+.custom-file-upload:active {
+    transform: translateY(0);
+}
+
+/* Le texte qui change quand un fichier est choisi */
+.file-name {
+    color: #00c853;
+    font-weight: 600;
+}
+
+/* Masquer l’input file natif (très moche) */
+input[type="file"] {
+    display: none;
 }

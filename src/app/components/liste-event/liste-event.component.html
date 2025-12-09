@@ -1,0 +1,9 @@
+<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/event.jpg) ;height: 150% ;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 id="tit">List of Events</h1>
+					</div>
+				</div>
+<div style="margin-top: 450px;" *ngFor="let m of event">
+    <app-events [obj]="m"></app-events>
+</div>

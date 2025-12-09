@@ -1,0 +1,17 @@
+ <body>
+ <div class="hero-container" >
+        <div class="video-wrapper">
+            <!-- Using a placeholder video from Pexels (free to use) -->
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="images/news.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        
+    </div>
+    </body>
+<div style="margin: 50px 50px;" *ngFor="let e of news"  >
+    <app-news [obj1]="e"></app-news>
+</div>

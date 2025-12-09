@@ -96,3 +96,9 @@
     background-color: #0056b3; /* Bleu plus foncé au survol */
     cursor: pointer;
 }
+#tit{
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bold;
+}

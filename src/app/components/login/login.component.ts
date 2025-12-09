@@ -16,6 +16,8 @@ export class LoginComponent {
     pwd:"",
     selectedRole:"",
   }
+   
+  tabUser:any=JSON.parse(localStorage.getItem("User")||"[]");
   msg:string="";
   addUser():void{
     if(this.user.selectedRole=="")
@@ -25,8 +27,21 @@ export class LoginComponent {
     else{
 
       this.msg="";
-      this.r.navigate(['/home']);
-      console.log("user:",this.user)
+      if(this.user.selectedRole=="admin"){
+        for (let i = 0; i < this.tabUser.length; i++) {
+        if(this.user.email==this.tabUser[i].Email && this.user.pwd==this.tabUser[i].Pwd)
+        {
+          this.r.navigate(['/home']);
+        }else{
+          this.msg="this admin n'exsite pas";
+        }
+      }
+      }else{
+        this.r.navigate(['/home']);
+      }
+      
+     
+      
     }
   }
 

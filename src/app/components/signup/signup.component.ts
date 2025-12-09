@@ -31,7 +31,9 @@ export class SignupComponent implements OnInit {
     }
     else{
       this.msg="";
-      console.log("etudient:",this.sigunp.value)
+       let UserTab=JSON.parse(localStorage.getItem("User")||"[]");
+  UserTab.push(this.sigunp.value);
+  localStorage.setItem("User",JSON.stringify(UserTab));
     }
   }
 

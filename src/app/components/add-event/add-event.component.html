@@ -1,0 +1,160 @@
+<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url(images/addEvent.jpg)"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 id="tit">Add-Event</h1>
+					</div>
+				
+
+	<!-- Contact -->
+
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					
+					<!-- Contact Form -->
+					<div class="contact_form">
+						<div class="contact_title">Get in touch</div>
+
+						<div class="contact_form_container">
+							<form action="post"[formGroup]="addEvent" >
+                                <div  style="margin-top: 20px;">
+									<input id="email" name="email" class="input_field contact_form_email" type="email" placeholder="E-mail" formControlName="Email"  >
+								</div>
+                                <div *ngIf="addEvent.controls['Email'].invalid && addEvent.controls['Email'].touched || addEvent.controls['Email'].dirty" >
+                                    
+                                    <div *ngIf="addEvent.controls['Email'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Email is required</span> 
+                                    </div>
+                                    <div *ngIf=" addEvent.controls['Email'].errors?.['email']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span> Email is invalid</span>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 20px;">
+									<input id="pwd" class="input_field contact_form_name" type="password" placeholder="password" formControlName="Pwd"   >
+								</div>
+                                <div *ngIf="addEvent.controls['Pwd'].invalid && addEvent.controls['Pwd'].touched " >
+                                    
+                                    <div *ngIf="addEvent.controls['Pwd'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Password is required</span> 
+                                    </div>
+                                    
+                                </div>
+                                <div  style="margin-top: 20px;">
+									<input id="title" name="title" class="input_field contact_form_email" type="test" placeholder="title of event" formControlName="tit"  >
+								</div>
+                                <div *ngIf="addEvent.controls['tit'].invalid && addEvent.controls['tit'].touched || addEvent.controls['tit'].dirty" >
+                                    <div *ngIf="addEvent.controls['tit'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>The tit is required</span> 
+                                    </div>
+                                    
+                                </div>
+                                <div  style="margin-top: 20px;">
+									<input id="des" name="des" class="input_field contact_form_email" type="text" placeholder="Description" formControlName="des"  >
+								</div>
+                                <div *ngIf="addEvent.controls['des'].invalid && addEvent.controls['des'].touched " >
+                                    <div *ngIf="addEvent.controls['des'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>Description is required</span> 
+                                    </div>
+                                </div>
+								
+						
+								
+                                 <div  style="margin-top: 20px;">
+									<input id="date" name="date" class="input_field contact_form_email" type="test" placeholder="date" formControlName="date"  >
+								</div>
+                                <div *ngIf="addEvent.controls['date'].invalid && addEvent.controls['date'].touched " >
+                                    <div *ngIf="addEvent.controls['date'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>The Date is required</span> 
+                                    </div>
+                                    
+                                </div>
+                                 <div  style="margin-top: 20px;">
+									<input id="club" name="club" class="input_field contact_form_email" type="test" placeholder="club" formControlName="club"  >
+								</div>
+                                <div *ngIf="addEvent.controls['club'].invalid && addEvent.controls['club'].touched " >
+                                    <div *ngIf="addEvent.controls['club'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>The Name of Club is required</span> 
+                                    </div>
+                                    
+                                </div>
+                                <div  style="margin-top: 20px;">
+									<input id="loc" name="loc" class="input_field contact_form_email" type="test" placeholder="localistion" formControlName="loc"  >
+								</div>
+                                <div *ngIf="addEvent.controls['loc'].invalid && addEvent.controls['loc'].touched " >
+                                    <div *ngIf="addEvent.controls['loc'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>The localistionis required</span> 
+                                    </div>
+                                    
+                                </div>
+                                 <div  style="margin-top: 20px;">
+									<input id="lien" name="lien" class="input_field contact_form_email" type="test" placeholder="Lien de post" formControlName="lien"  >
+								</div>
+                                <div *ngIf="addEvent.controls['lien'].invalid && addEvent.controls['lien'].touched " >
+                                    <div *ngIf="addEvent.controls['lien'].errors?.['required']" class="msg-erreur">
+                                    <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                    </svg>
+                                    <span>The lien required</span> 
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div  style="margin-top: 20px;">
+                                   <label for="file-upload" class="custom-file-upload">
+                                        <span class="upload-text">Choisir un fichier</span>
+                                        <span class="file-name">Aucun fichier choisi</span>
+                                    </label>
+                                    <input id="file-upload" type="file" #fileInput  (change)="onFileSelected($event)" accept="image/*">
+								</div>
+                                <div *ngIf="imagePreview" class="preview">
+                  <p>Aperçu :</p>
+                  <img [src]="imagePreview" alt="Prévisualisation" style="max-width: 200px; max-height: 200px;" />
+                </div>
+								
+								
+                                 <p *ngIf="msg" class="msg-erreur">
+                                     <svg class="icon-error" viewBox="0 0 24 24" fill="currentColor">
+                                         <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                                     </svg>
+                                     <span>{{ msg }}</span>
+                                 </p>
+                                                                    
+								
+								
+								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Submit" (click)="AddEvent()" >Add</button>
+							</form>
+						</div>
+					</div>
+						
+				</div>
+
+				
+
+
+			</div>
+        </div>

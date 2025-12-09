@@ -109,8 +109,10 @@
 	<app-testimonials></app-testimonials>
 
 	<!-- Events -->
-
-	<app-events></app-events>
+	<div *ngFor="let m of event">
+		<app-events [obj]="m"></app-events>
+	</div>
+	
 
 	<!-- Footer -->
 

@@ -1,0 +1,35 @@
+#tit{
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bold;
+}
+/* Style appliqué à la table entière */
+table {
+  width: 80%; /* Occupe 80% de la largeur du conteneur */
+  margin: 20px auto; /* Centre le tableau horizontalement et ajoute de l'espace autour */
+  border: #4CAF50 5px solid; /* Fusionne les bordures des cellules */
+  font-family: Arial, sans-serif; /* Police de caractères */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+}
+
+/* Styles pour les cellules (Header et Data) */
+th, td {
+  padding: 12px 15px; /* Espace intérieur (haut/bas et gauche/droite) */
+  text-align: left; /* Alignement du texte à gauche */
+  border-bottom: 1px solid #ddd;
+   /* Ligne de séparation douce entre les lignes */
+}
+
+/* Styles spécifiques pour l'en-tête (Header) */
+th {
+  background-color: #4CAF50; /* Couleur d'arrière-plan de l'en-tête (Vert) */
+  color: white; /* Couleur du texte en blanc */
+  text-transform: uppercase;
+  font-size: 20px; /* Met le texte en majuscules */
+}
+td{
+  font-size:20px;
+  color: black;
+  font-weight: bold;
+}

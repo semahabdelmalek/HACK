@@ -98,3 +98,9 @@ body {
 .read-more:hover i {
     transform: translateX(5px);
 }
+#tit{
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bold;
+}
